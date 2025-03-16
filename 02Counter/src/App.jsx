@@ -8,7 +8,21 @@ function App() {
 
   //let counter = 5;
   const addValue = () => {
-    setCounter(counter + 1);
+    setCounter((prevCounter) => {
+      return prevCounter + 1;
+    })
+    setCounter((prevCounter) => {
+      return prevCounter + 1;
+    })
+    setCounter((prevCounter) => {
+      return prevCounter + 1;
+    })
+    setCounter((prevCounter) => {
+      return prevCounter + 1;
+    })
+    setCounter((prevCounter) => {
+      return prevCounter + 1;
+    })
     console.log(counter);
   }
 
