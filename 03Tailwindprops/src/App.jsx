@@ -12,7 +12,8 @@ function App() {
       <h1 className="bg-green-400 text-2xl rounded-xl text-black mb-4">
         Tailwaind Test
       </h1>
-     <Card />
+     <Card username = "Christi" btnText = "Click me"/>
+     <Card username = "Jane" btnText = "Visit me"/>
     </>
   );
 }
