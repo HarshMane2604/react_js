@@ -14,6 +14,9 @@ function App() {
 
   const subValue = () => {
     setCounter(counter - 1);
+    if(counter <= 0){
+      setCounter(0);
+    }
     console.log(counter);
   }
   return (
