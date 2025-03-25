@@ -39,7 +39,7 @@ function InputBox({
                     disabled = {currencyDisable}
                     
                 >
-                    {/* remeber the keys is loop in react */}
+                    {/* remeber the keys in loop in react */}
                         {currencyOptions.map((currency) => (
                             <option key={currency} value={currency}>
                                 {currency}
