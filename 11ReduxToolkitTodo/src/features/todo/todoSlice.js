@@ -12,13 +12,13 @@ export const todoSlice = createSlice({
         // if you have declare the fucntion upwards then give reference here don't call
         addTodo: (state, action) => {
             const todo = {
-                id: nanoid,
+                id: nanoid(),
                 text: action.payload
             }
             state.todos.push(todo);
         },
         removeTodo: (state, action) => {
-            state.todos.filter((todo) => todo.id !== action.payload);
+            state.todos = state.todos.filter((todo) => todo.id !== action.payload);
         },
 
     }
