@@ -1,0 +1,2 @@
+Vendor lock-in concept
+concept of service
