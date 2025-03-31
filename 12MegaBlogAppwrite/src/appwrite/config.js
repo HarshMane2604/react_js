@@ -97,15 +97,38 @@ export class Service{
         }
     }
 
-    // FILE UPLOAD SERVICES
+    // FILE UPLOAD & DELETE SERVICES
 
     async uploadFile(file){
         try {
-            
+            return await this.bucket.createFile(
+                conf.aapwriteBucketId,
+                ID.unique(),
+                file
+            )
         } catch (error) {
             console.log("Appwrite sevice :: getCurrentUser :: error", error);
             return false;
         }
+    }
+
+    async deleteFile(fileID){
+        try {
+            await this.bucket.deleteFile(
+                conf.aapwriteBucketId,
+                fileID
+            )
+            return true 
+        } catch (error) {
+            console.log("Appwrite sevice :: getCurrentUser :: error", error)
+        }
+    }
+
+    getFilePreview(fileID){
+        return this.bucket.getFilePreview(
+            conf.aapwriteBucketId,
+            fileID
+        )
     }
 }
 
