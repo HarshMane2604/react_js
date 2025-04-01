@@ -1,15 +1,15 @@
 import conf from '../conf/conf';
-import {Client, Account, ID, Client} from "appwrite";
+import {Client, Account, ID} from "appwrite";
 
 export class AuthService { // OPTIMIZED WAY
-    Client = new Client()
-    account; // i van ask directly to account weather i'm login or not
+    client = new Client()
+    account; // i can ask directly to account weather i'm login or not
 
     constructor() {
-        this.Client
+        this.client
             .setEndpoint(conf.aapwriteUrl)
             .setProject(conf.aapwriteProjectId);
-        this.account = new account(this.Client);
+        this.account = new Account(this.client);
     }
 
     async createAccount({email, password, name}){
